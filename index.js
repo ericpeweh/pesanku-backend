@@ -17,10 +17,13 @@ app.get("/", (req, res) => res.json("pesanKu"));
 app.get("/:msgId", async (req, res) => {
 	try {
 		const { msgId } = req.params;
-		const data = await Message.find({ shorId: msgId });
-		console.log(data);
+		const data = await Message.findOne({ shortId: msgId });
 
-		res.json(data[0]);
+		if (data) {
+			res.json(data);
+		} else {
+			res.json({});
+		}
 	} catch (err) {
 		console.log(err.message);
 	}
