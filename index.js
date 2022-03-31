@@ -34,7 +34,6 @@ app.post("/create", async (req, res) => {
 		const newMessage = new Message({ messages, emot, shortId });
 
 		const result = await newMessage.save();
-		console.log(result);
 
 		res.json({ link: `https://pesanku.netlify.app/${shortId}` });
 	} catch (e) {
