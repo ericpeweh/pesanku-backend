@@ -1,0 +1,24 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"env": "0.0.2",
+		"express": "^4.17.3",
+		"mongodb": "^4.4.1",
+		"mongoose": "^6.2.9",
+		"nodemon": "^2.0.15",
+		"shortid": "^2.2.16"
+	}
+}
