@@ -69,7 +69,7 @@ app.post("/create", upload.single("image"), async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-	res.status(404).json("NOT FOUND!");
+	res.status(404).json("NOT ROUTE FOUND!");
 });
 
 // Connect to MongoDB
